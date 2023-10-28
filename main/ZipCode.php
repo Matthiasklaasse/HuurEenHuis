@@ -44,5 +44,5 @@ function GetDistanceBetweenZIPCodes($Zip1, $Zip2){
 
     return GetDistanceBetweenCoordinates($Coordinate1, $Coordinate2);
 }
-echo GetDistanceBetweenZIPCodes("7364ac", "7361ap");
+echo GetDistanceBetweenZIPCodes("7364ac", "7361ap")." But not for now and probably never";
 ?>
