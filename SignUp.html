@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <div id="NotificationsBar" class="NotificationsBar"></div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HuurEenHuis.nl (ieder huis een thuis)</title>
+    <link rel="icon" type="image/x-icon" href="Images/Logo.ico">
+    <link rel="stylesheet" href="GeneralStyle.css">
+    <style>
+        .mid {
+            width: 70vw;
+            margin: 0 auto;
+            padding: 10vw;
+            border: 1px solid #ccc;
+            border-radius: 0.2vw;
+            color: #555;
+            background-color: #f9f9f9;
+        }
+        table {
+            width: 100%;
+        }
+        table td {
+            padding: 10px 0;
+        }
+        select, input[type="text"], input[type="email"], input[type="password"] {
+            width: 50vw;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        select {
+            height: 36px;
+        }
+        input[type="submit"] {
+            background-color: #555;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            width: 70vw;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #3a3a3a;
+        }
+        @media screen and (min-width: 700px) {
+            .mid {
+                padding: 1vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="Topbar">
+        <div class="Centered">
+            <a href="/project/HompageFrame.php"><img src="Images/Logo.ico" class="Logo" alt="HuurEenHuis Logo"></a>
+            <a class="Slogan" onclick="location = '/project/HompageFrame.php'">HuurEenHuis: ieder huis een thuis</a>
+        </div>
+    </div>
+    <br>
+    <form method="post" action="/Project/MakeAccount.php" id="MakeAccount" class="mid">
+        <table>
+            <tr>
+                <td>Gebruikers naam:</td>
+                <td><input type="text" name="UserName" value="" required></td>
+            </tr>
+            <tr>
+                <td>Voornaam:</td>
+                <td><input type="text" name="FirstName" value="" required></td>
+            </tr>
+            <tr>
+                <td>Achternaam:</td>
+                <td><input type="text" name="LastName" value="" required></td>
+            </tr>
+            <tr>
+                <td>Account type:</td>
+                <td>
+                    <select name="AccountType" required>
+                        <option value="Buyer">Koper</option>
+                        <option value="Seller">Verkoper</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="Email" value="" required></td>
+            </tr>
+            <tr>
+                <td>Wachtwoord:</td>
+                <td><input type="password" name="Password" value="" required pattern="^(?=.*[A-Z]).{8,}$" title="Wachtwoord moet minstens een hoofdletter en 8 tekens hebben"></td>
+            </tr>
+        </table>
+        <input type="submit" value="Maak account">
+    </form>
+    <br>
+    <script src="Notifications.js"></script>
+    <script>
+        // Load and set input values from sessionStorage
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('MakeAccount');
+            for (let i = 0; i < form.elements.length; i++) {
+                const input = form.elements[i];
+                if (input.type !== 'submit') {
+                    const savedValue = sessionStorage.getItem(input.name);
+                    if (savedValue !== null) {
+                        input.value = savedValue;
+                    }
+                }
+            }
+        });
+
+        // Save input values in sessionStorage on input change
+        document.addEventListener('change', function (event) {
+            if (event.target.type !== 'submit') {
+                sessionStorage.setItem(event.target.name, event.target.value);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+body{
+    font-size: 2vw;
+}
+
+.centered {
+    display: flex;
+    align-items: center;
+}
+
+.mid {
+    width: 60vw;
+    height: auto;
+    background-color: #555;
+    margin: 0 auto;
+    padding: 2vw;
+    border-radius: 2vw;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+}
+
+table td {
+    padding: 1vw;
+}
+
+@media screen and (max-width: 00px) {
+    .mid {
+        width: 90vw;
+    }
+
+    table td {
+        padding: 1vw;
+    }
+}

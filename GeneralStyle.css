@@ -1,0 +1,117 @@
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    font-size: 1.5vw;
+    font-family: system-ui;
+    color: #fff;
+    background-color: rgb(39, 39, 39);
+}
+
+.Logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 20%;
+    margin: 10px;
+}
+
+.Topbar {
+    width: 1000%;
+    height: 70px;
+    background-color: #555;
+    border-radius: 8px;
+    z-index: 31;
+}
+
+.Centered {
+    display: flex;
+    align-items: center;
+}
+
+.NotificationsBar {
+    position: absolute;
+    margin-left: 69vw;
+    width: 30vw;
+    top: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end; 
+}
+
+.Notification {
+    margin-top: 0.3vw;
+    display: grid;
+    place-items: center;
+    position: relative;
+    background-color: #3b3b3b;
+    border-radius: 1vw;
+    transition: transform 0.3s ease;
+}
+
+.Notification:hover {
+    transform: translateX(10%);
+}
+
+.Notification.active {
+    transform: translateX(100%);
+}
+
+.Slogan {
+    flex: 1;
+    font-size: 3vw;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+}
+
+.HouseInfoContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Line {
+    width: 75%;
+    height: 7px;
+    background-color: #555;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.Logincontainer {
+    width: 10vw;
+    height: 30vw;
+    margin-top: 1vw;
+    background-color: #555;
+    border-radius: 0.3vw;
+}
+
+@media screen and (max-width: 700px) {
+    .Slogan {
+        font-size: 4vw;
+    }
+    body {
+        overflow: auto;
+        font-size: 3vw;
+    }
+    
+    .Notification {
+        min-width: 70vw;
+        min-height: 10vw;
+        font-size: 3vw;
+        border-radius: 3vw;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .Notification {
+        min-width: 30vw;
+        min-height: 3vw ;
+        font-size: 1.2vw;
+    }
+}

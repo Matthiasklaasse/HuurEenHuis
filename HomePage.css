@@ -1,0 +1,262 @@
+#top-bar {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+    align-items: flex-start;
+    margin: 0;
+}
+
+.HouseAd {
+    flex: 1;
+    max-width: 300px;
+    min-width: 180px;
+    margin: 10px;
+    aspect-ratio: 1;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 2px solid #555;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.HouseAd:hover{
+    transform: scale(1.2);
+}
+
+.HouseAdPriceTag, .HouseAdNameTag {
+    height: 20%;
+    border: none;
+    background-color: #555;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.HouseAdPriceTag {
+    margin-top: auto;
+    padding: 4px;
+    font-size: 18px;
+}
+
+.HouseAdNameTag {
+    margin-bottom: 0;
+    padding: 4px;
+    font-size: 18px;
+}
+
+.Tabbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    height: 70px;
+    border: 2px solid #555;
+    background-color: #555;
+    border-radius: 8px;
+    z-index: inherit;
+}
+
+.PriceFilter {
+    width: 10vw;
+    margin-bottom: 0.3vw;
+}
+
+.PriceFilterDiv {
+    width: 12vw;
+    margin-right: 2vw;
+}
+
+.SortText {
+    font-size: 0.8;
+}
+
+#search-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
+    margin-left: 0%;
+}
+
+.Filterbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    height: 70px;
+    border: 2px solid #555;
+    background-color: #555;
+    border-radius: 8px;
+    z-index: inherit;
+}
+
+.Option {
+    width: 400vw;
+    background-color: #373738;
+    border-radius: 0.3vw;
+    transition: border-radius 0.5s;
+    margin-bottom: 1vw;
+}
+
+.Option:hover {
+    border-radius: 3vw;
+}
+
+.OptionText {
+    margin-left: 1vw;
+}
+
+.TabMobile {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    border: 2px solid #555;
+    border-radius: 8px;
+}
+
+.Tab {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    border: 2px solid #555;
+    border-radius: 8px;
+}
+
+.Search {
+    width: 1000%;
+    height: 50px;
+    margin: 10px;
+    font-size: 18px;
+    border: 2px solid #555;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 5px 10px;
+    color: #555;
+}
+
+.Adimg {
+    object-fit: cover;
+}
+
+.Login {
+    margin-top: 1vw;
+    width: 20vw;
+    margin-left: 80vw;
+    background-color: #464646;
+    border-radius: 1vw;
+    z-index: 31;
+}
+
+.Ads {
+    display: flex;
+}
+
+.LoginBar {
+    display: none;
+    margin-top: 150px;
+    width: 100px;
+    height: 200px;
+    position: absolute;
+    z-index: 32;
+}
+
+.LoginItems {
+    width: 15vw;
+    margin-left: 2vw;
+}
+
+.LoginButton {
+    width: 100px;
+    margin-left: 7vw;
+}
+
+.centered {
+    display: flex;
+    align-items: center;
+}
+
+.mid {
+    width: 30vw;
+    height: auto;
+    background-color: #555;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 2vw;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+}
+
+table td {
+    padding: 5px;
+}
+
+@media screen and (max-width: 700px) {
+    .LoginBar {
+        display: none;
+        margin-top: 150px;
+        width: 80vw;
+        height: 50vw;
+        position: absolute;
+        z-index: 32;
+    }
+
+    .LoginItems {
+        width: 60vw;
+        margin-left: 2vw;
+    }
+
+    .Login {
+        width: 70vw;
+        background-color: #464646;
+        border-radius: 1vw;
+        margin-left: 12vw;
+        z-index: 31;
+    }
+    .PriceFilter {
+        width: 10vw;
+    }
+    .TabMobile {
+        display: none;
+    }
+    .mid{
+        width: 80vw;
+    }
+    .HouseAd {
+        margin: 10px;
+    }
+
+    .Option {
+        width: 100%;
+    }
+}

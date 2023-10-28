@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="GeneralStyle.css">
+    <link rel="stylesheet" href="HomePage.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HuurEenHuis.nl (ieder huis een thuis)</title>
+    <link rel="icon" type="image/x-icon" href="Images/Logo.ico">
+</head>
+<body>
+    <div id="NotificationsBar" class="NotificationsBar">
+    </div>
+    <div class="Topbar">
+        <div class="Centered">
+            <a href=""><img src="Images/Logo.ico" class="Logo" alt="HuurEenHuis Logo"></a>
+            <a class="Slogan" onclick="location = ' '">HuurEenHuis: ieder huis een thuis</a>
+        </div>
+    </div>
+    
+    <div class="Tabbar">
+        <img src="Images/glass.png" class="Tab" onclick="document.getElementById('Search').focus()"></img>
+        <input type="text" class="Search" id="Search"></input>
+        <img class="Tab" src="Images/Account.png" id="account"></img>
+        <img class="Tab" src="Images/House.png"></img>
+    </div>
+    <div class="LoginBar" id="Login">
+        <div class="Login">
+            <form method="post">
+                <a class="LoginItems">Email: </a>
+                <br> 
+                <input type="text" name="Username" class="LoginItems">
+                <br>
+                <br>
+                <a class="LoginItems">Wachtwoord: </a> 
+                <br> 
+                <input type="password" name="Password" class="LoginItems">
+                <br>
+                <br>
+                <input type="submit" value="Login" class="LoginItems">
+                <br>
+            </form>
+            <br>
+            <a class="LoginItems">Or: </a><button>make accont</button>
+        </div>
+    </div>
+
+    </div>
+    <div class="HouseAd">
+        <div class="HouseAdNameTag">Huis in het bos bij Hoenderloo</div>
+        <img src="huisjes/download (1).jpg" class="Adimg"></img>
+        <div class="HouseAdPriceTag">€2,500 per maand</div>
+    </div>
+    <div class="HouseAd">
+        <div class="HouseAdNameTag">Huis2</div>
+        <img src="huisjes/download (2).jpg" class="Adimg"></img>
+        <div class="HouseAdPriceTag">€3,000 per maand</div>
+    </div>
+    <div class="HouseAd">
+        <div class="HouseAdNameTag">Huis3</div>
+        <img src="huisjes/download (3).jpg" class="Adimg"></img>
+        <div class="HouseAdPriceTag">€1,500 per maand</div>
+    </div>
+    <div class="HouseAd">
+        <div class="HouseAdNameTag">Huis4</div>
+        <img src="huisjes/download (5).jpg" class="Adimg"></img>
+        <div class="HouseAdPriceTag">€800 per maand</div>
+    </div>
+    <div class="HouseAd">
+        <div class="HouseAdNameTag">Huis5</div>
+        <img src="huisjes/download (6).jpg" class="Adimg"></img>
+        <div class="HouseAdPriceTag">€1,100 per maand</div>
+    </div>
+    <div class="HouseAd">
+        <div class="HouseAdNameTag">Huis6</div>
+        <img src="huisjes/download (7).jpg" class="Adimg"></img>
+        <div class="HouseAdPriceTag">€900 per maand</div>
+    </div>
+    <script src="Homepage.js"></script>
+</body>
+</html>

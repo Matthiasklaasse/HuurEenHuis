@@ -1,0 +1,115 @@
+.Logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.HouseInfoContainer {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 5%;
+    margin-top: 1%;
+    flex-direction: row;
+}
+
+.HouseInfoLeft {
+    flex-shrink: 0;
+}
+
+.HousePhoto {
+    width: 40vw;
+    border-radius: 1vw;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.HousePhotoExpanded {
+    width: 50vw;
+    border-radius: 1vw;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 600px) {
+    .HousePhotoExpanded {
+        border-radius: 1vw;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        object-fit: cover;
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin-left: 25vw;
+        margin-top: 12.5vw;
+        z-index: 9999;
+        width: 50vw;
+        transform: scale(1.5);
+    }
+
+    .HousePhoto:hover {
+        transform: scale(1.1);
+    }
+}
+
+.HouseInfoRight {
+    margin-left: 5%;
+    width: 50%;
+}
+
+td {
+    margin-left: 0px;
+}
+
+.Line {
+    width: 75%;
+    height: 7px;
+    background-color: #555;
+}
+
+.Revieuw{
+    font-size: 1vw;
+    background-color:#555555;
+    width: 35vw;
+    border-radius: 1vw;
+    margin: 1vw;
+}
+
+.RevText{
+    margin: 1vw;
+}
+
+.Star{
+    width: 2vw;
+    height: 2vw;
+}
+
+.Check{
+    width: 1vw;
+    height: 1vw;
+}
+
+@media screen and (max-width: 700px) {
+    .HouseInfoContainer {
+        flex-direction: column;
+    }
+
+    .HouseInfoRight {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .HousePhoto {
+        width: 90vw;
+        height: auto;
+        margin: 0 auto 1%;
+    }
+
+    .Revieuw{
+        font-size: 2.5vw;
+        background-color:#555555;
+        width: 75vw;
+        border-radius: 1vw;
+        margin: 1vw;
+    }
+}
