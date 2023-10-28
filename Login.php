@@ -1,5 +1,5 @@
 <?php
-ini_set('session.gc_maxlifetime', 604800);
+ini_set('session.gc_maxlifetime', 604801);
 
 $dbHost = "localhost";
 $dbUsername = "root";
